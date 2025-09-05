@@ -1,0 +1,577 @@
+/* -------------------- App Features Section -------------------- */
+.feature-section-bg-container{
+    background-color: #DADADA;
+    padding-bottom: 5px;
+}
+
+.app-features-section {
+    position: relative;
+    background: radial-gradient(circle at top, #25D969, #043818);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 0;
+    overflow: hidden;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Title and Subtitle */
+  .features-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .features-subtitle {
+    font-size: 1rem;
+    color: #EDEDED;
+    max-width: 500px;
+    margin: 0 auto 30px;
+  }
+  
+  /* ---------------- Layout Wrapper ---------------- */
+  .features-layout {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  /* ---------------- Center Phone ---------------- */
+  .phone-wrapper {
+    position: relative;
+    width: 366px;
+    z-index: 2;
+    top:110px;
+  }
+  
+  .phone-img {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 2;
+    
+  }
+  
+  /* Content inside the phone */
+  .phone-content {
+    position: absolute;
+    top: 17%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    text-align: center;
+    z-index: 3;
+  }
+  
+  .qr-img {
+    width: 90px;
+    margin-bottom: 5px;
+  }
+  
+  .download-text {
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #FD6502;
+    margin-top: 5px;
+  }
+  
+  .store-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .store-btn {
+    width: 60px;
+    cursor: pointer;
+  }
+  
+  /* ---------------- Floating Feature Cards ---------------- */
+  .feature-card {
+    position: absolute;
+    background: #fff;
+    color: #161616;
+    border-radius: 14px;
+    padding: 12px;
+    width: 90px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+  }
+  
+  .feature-card p {
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* -------- Exact Card Positions -------- */
+  .veg-mode { top: 10%; left: 30%; }
+  .healthy { bottom: 38%; left: 20%; }
+  .plan-party { bottom: 10%; left: 30%; }
+  
+  .gourmet { top: 10%; right: 30%; }
+  .offers { bottom: 38%; right: 20%; }
+  .collections { bottom: 10%; right: 30%; }
+  
+  /* ---------------- Responsiveness ---------------- */
+  @media (max-width: 992px) {
+    .phone-wrapper {
+      width: 350px;
+    }
+    .feature-card {
+      width: 75px;
+      padding: 8px;
+    }
+    .feature-card img {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .veg-mode { top: 14%; left: 22%; }
+    .healthy { bottom: 35%; left: 8%; }
+    .plan-party { bottom: 10%; left: 22%; }
+  
+    .gourmet { top: 14%; right: 22%; }
+    .offers { bottom: 35%; right: 8%; }
+    .collections { bottom: 10%; right: 22%; }
+  }
+  
+  @media (max-width: 576px) {
+    .phone-wrapper {
+      width: 280px;
+    }
+  
+    .qr-img {
+      width: 70px;
+    }
+  
+    .store-btn {
+      width: 40px;
+    }
+  
+    .feature-card {
+      width: 65px;
+      padding: 6px;
+    }
+    .feature-card img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    /* Mobile positions */
+    .veg-mode { top: 14%; left: 8%; }
+    .healthy { bottom: 14%; left: 5%; }
+    .plan-party { bottom: 6%; left: 18%; }
+  
+    .gourmet { top: 14%; right: 8%; }
+    .offers { bottom: 14%; right: 5%; }
+    .collections { bottom: 6%; right: 18%; }
+  }
+  
+  
+  /* Mobile */
+  @media (max-width: 576px) {
+    .app-features-section {
+      padding: 25px 0 25px; /* Compact height on small screens */
+      border-bottom-left-radius: 40%;
+      border-bottom-right-radius: 40%;
+    }
+  
+    .features-layout {
+      height: 180px;
+    }
+  
+    .phone-center {
+      width: 150px;
+      top: 60px;
+    }
+  
+    .feature-card {
+      width: 60px;
+      padding: 2px;
+    }
+    .feature-card img {
+      width: 25px;
+      height: 25px;
+    }
+  
+    /* Mobile text */
+    .features-title {
+      font-size: 1.4rem;
+    }
+    .features-subtitle {
+      font-size: 0.85rem;
+    }
+  
+    /* Mobile card positions */
+    .veg-mode { top: 0%; left: 14%; }
+    .healthy { bottom: 35%; left: 2%; }
+    .plan-party { bottom: 2%; left: 14%; }
+  
+    .gourmet { top: 6%; right: 14%; }
+    .offers { bottom: 35%; right: 2%; }
+    .collections { bottom: 2%; right: 14%; }
+  }
+
+  /* ================== Featured Products Section ================== */
+.featured-products-section {
+    background: #EAEAEA; 
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .featured-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #161616;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+  
+  /* Product Card */
+  .product-card {
+    background: #fff;
+    border-radius: 10px; 
+    overflow: hidden;
+    box-shadow: 
+      0 10px 15px rgba(0, 0, 0, 0.10),
+      0 4px 8px rgba(0, 0, 0, 0.10);   
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #f0f0f0; 
+    justify-content: center;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+      0 12px 20px rgba(0, 0, 0, 0.15), 
+      0 6px 12px rgba(0, 0, 0, 0.12);
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image Area */
+  .product-img-container {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid #EAEAEA;
+  }
+  
+  .product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px 6px 0 0;
+  }
+  
+  /* Add to Cart Button (Always Visible) */
+  .add-to-cart-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #161616;
+    color: #fff;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    opacity: 1;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .add-to-cart-btn:hover {
+    background: #333;
+  }
+  
+  /* Product Info Section */
+  .product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 12px;
+    flex-grow: 1; /* Pushes footer down if needed */
+  }
+  
+  .product-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .product-name {
+    font-size: 1rem;
+  
+    color: #000000;
+    margin: 0;
+  }
+  
+  .product-category {
+    font-size: 0.8rem;
+    color: #6C6C6C;
+    margin-top: 4px;
+  }
+  
+  .product-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+  }
+  
+  /* Rating Badge */
+  .rating {
+    display: inline-flex;
+    align-items: center;
+    background: #089437;
+    color: #E8E8E8;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .star-icon {
+    font-size: 14px;
+    color: #fff;
+    margin-right: 3px;
+  }
+  
+  /* Price */
+  .price {
+    color: #FF6502;
+
+    font-size: 0.9rem;
+  }
+  
+
+  /* ================== Responsive ================== */
+  @media (max-width: 991.98px) {
+    .product-img {
+      height: 160px;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .product-img {
+      height: 140px;
+    }
+  
+    .product-info {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .product-right {
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .featured-title {
+      font-size: 1.4rem;
+    }
+  
+    .product-img {
+      height: 120px;
+    }
+  }
+  
+ /* Main Footer Section */
+.footer-section {
+    background: rgba(11, 11, 11, 0.89); /* Footer background with 89% opacity */
+    color: #fff;
+    padding: 40px 20px 20px;
+    margin:10px;
+    border-radius: 10px;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Logo */
+  .footer-logo {
+    text-align: center;
+  }
+  
+  .logo-img {
+    height: 55px;
+  }
+  
+  /* Footer Columns Layout */
+  .footer-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+  }
+  
+  /* Address Icon */
+  .footer-location-icon {
+    color: #FF6502 !important; /* Orange color */
+    font-size: 20px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Footer Column Styling */
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* <-- Added spacing between all items inside each column */
+  }
+  
+  .footer-col h4 {
+    font-size: 1rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #ffffff;
+  }
+  
+  /* Add spacing between multiple <h4> tags (like in "For Restaurants") */
+  .footer-col h4 + h4 {
+    margin-top: 8px;
+  }
+  
+  /* Footer Column Paragraphs */
+  .footer-col p {
+    font-size: 0.9rem;
+    color: #E8E8E8;
+    line-height: 1.6;
+    font-weight: 400;
+    letter-spacing: 0.72px;
+    margin: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  
+  /* Contact Icons */
+  .contact-icon {
+    font-size: 18px;
+    color: #FF6502;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+  
+  /* Payment Methods */
+  .payment-icons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  
+  .payment-icons img {
+    height: 30px;
+    border-radius: 4px;
+    background: #fff;
+    padding: 4px;
+    transition: transform 0.3s ease;
+  }
+  
+  .payment-icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Social Icons */
+  .social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ff6500;
+    transform: translateY(-3px);
+  }
+  
+  /* Download Section */
+  .footer-download {
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .footer-download p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4B4B4B;
+    margin: 0 15px 10px 0;
+  }
+  
+  .download-buttons img {
+    height: 45px;
+    margin: 0 6px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .download-buttons img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #4E4E4E;
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  
+  .footer-icon{
+    color:#FF6502;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 767.98px) {
+    .footer-columns {
+      grid-template-columns: 1fr 1fr;
+      text-align: center;
+    }
+  
+    .payment-icons,
+    .social-icons {
+      justify-content: center;
+    }
+  
+    .footer-download {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
