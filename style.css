@@ -292,7 +292,7 @@ html, body {
 @media (max-width: 575.98px) {
   .orange-banner-section {
     padding: 80px 10px;
-    min-height: 350px;
+    min-height: 400px;
   }
 
   .orange-banner-heading {
@@ -319,12 +319,15 @@ html, body {
   }
 
   .location-input-container {
-    padding: 10px 12px;
+    padding: 4px 6px;
   }
 
   .search-input {
     font-size: 13px;
+  
+    margin: 5px;
   }
+  
 }
 
 @media (min-width: 992px) and (max-width:1199px) {
