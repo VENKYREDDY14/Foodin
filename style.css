@@ -1,577 +1,1149 @@
-/* -------------------- App Features Section -------------------- */
-.feature-section-bg-container{
-    background-color: #DADADA;
-    padding-bottom: 5px;
+/* ==================== GLOBAL STYLES ==================== */
+* {
+  font-family: "Plus Jakarta Sans";
 }
 
-.app-features-section {
-    position: relative;
-    background: radial-gradient(circle at top, #25D969, #043818);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0 0;
-    overflow: hidden;
-    border-bottom-left-radius: 100%;
-    border-bottom-right-radius: 100%;
-    margin-bottom: 20px;
+/* Prevent horizontal scroll */
+html, body {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+/* ==================== NAVBAR SECTION ==================== */
+.navbar-bg-container {
+  background-color: #F2F2F2;
+}
+
+.nav-logo {
+  width: 120px;
+}
+
+.nav-get-app-text {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 18px;
+  color: #161616;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.arrow-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #161616; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #161616;  
+  font-size: 16px;
+  background-color: transparent; 
+}
+
+.login-btn {
+  background-color: #161616;
+  color: #EDEDED;
+  border-radius: 30px;
+  padding: 6px 40px;
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.signup-btn {
+  background-color: #FF6502;
+  color: #fff;
+  border-radius: 30px;
+  padding: 6px 40px;
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Navbar Responsive */
+@media (max-width: 767.98px) {
+  .nav-logo {
+    width: 90px;
   }
   
-  /* Title and Subtitle */
-  .features-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 8px;
+  .login-btn, .signup-btn {
+    padding: 5px 20px;
+    font-size: 14px;
   }
   
-  .features-subtitle {
-    font-size: 1rem;
-    color: #EDEDED;
-    max-width: 500px;
-    margin: 0 auto 30px;
+  .navbar .container {
+    flex-wrap: wrap;
+    gap: 10px;
   }
-  
-  /* ---------------- Layout Wrapper ---------------- */
-  .features-layout {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+ 
+}
+
+
+
+/* ==================== GREEN BANNER SECTION ==================== */
+.green-banner-bg-container {
+  background-color: #1FBE5B;
+}
+
+.delivery-btn {
+  background-color: #161616;
+  color: #fff;
+  border-radius: 30px;
+  padding: 6px 20px;
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.delivery-btn:hover {
+  background-color: #F2F2F2;
+  color: #161616;
+}
+
+.takeaway-btn {
+  background-color: #F2F2F2;
+  color: #161616;
+  border-radius: 30px;
+  padding: 6px 20px;
+  border: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.takeaway-btn:hover {
+  background-color: #161616;
+  color: #F2F2F2;
+}
+
+.green-banner-bg-container .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Green Banner Responsive */
+@media (max-width: 767.98px) {
+  .green-banner-bg-container .container {
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  /* ---------------- Center Phone ---------------- */
-  .phone-wrapper {
-    position: relative;
-    width: 366px;
-    z-index: 2;
-    top:110px;
+}
+
+/* ==================== ORANGE BANNER SECTION ==================== */
+.orange-banner-section {
+  background-color: #FF5200;
+  overflow: hidden;
+  position: relative;
+  padding: 140px 20px;
+  text-align: center;
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.orange-banner-heading {
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 2;
+}
+
+.orange-banner-heading span {
+  font-weight: bold;
+}
+
+.orange-banner-para {
+  font-size: 1.1rem;
+  color: #EDEDED;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.location-input-container {
+  background-color: #F2F2F2;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  width: 330px;
+  max-width: 100%;
+}
+
+.search-input {
+  background: none;
+  border: none;
+  outline: none;
+  color: #686868;
+  font-size: 14px;
+  padding: 4px;
+  flex: 1;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.search-input::placeholder {
+  color: #686868;
+}
+
+.location-icon {
+  color: #686868;
+  margin-right: 8px;
+}
+
+.orange-banner-image {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px dashed #fff;
+  padding: 6px;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.orange-banner-image.left {
+  bottom: -140px;
+  left: -140px;
+}
+
+.orange-banner-image.right {
+  top: -140px;
+  right: -140px;
+}
+
+/* Orange Banner Responsive */
+@media (max-width: 767.98px) {
+  .orange-banner-section {
+    padding: 100px 15px;
+    min-height: 400px;
   }
-  
-  .phone-img {
+
+  .orange-banner-heading {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+
+  .orange-banner-para {
+    font-size: 0.95rem;
+  }
+
+  .orange-banner-image.left {
+    bottom: -100px;
+    left: -100px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .orange-banner-image.right {
+    top: -100px;
+    right: -100px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 12px;
     width: 100%;
-    display: block;
-    position: relative;
-    z-index: 2;
+    align-items: center;
+  }
+
+  .location-input-container {
+    width: 100% !important;
+    max-width: 350px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .orange-banner-section {
+    padding: 120px 15px;
+  }
+
+  .orange-banner-image.left {
+    bottom: -120px;
+    left: -120px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .orange-banner-image.right {
+    top: -120px;
+    right: -120px;
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .orange-banner-section {
+    padding: 80px 10px;
+    min-height: 350px;
+  }
+
+  .orange-banner-heading {
+    font-size: 1.4rem;
+  }
+
+  .orange-banner-para {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+
+  .orange-banner-image.left {
+    bottom: -80px;
+    left: -80px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .orange-banner-image.right {
+    top: -80px;
+    right: -80px;
+    width: 160px;
+    height: 160px;
+  }
+
+  .location-input-container {
+    padding: 10px 12px;
+  }
+
+  .search-input {
+    font-size: 13px;
+  }
+}
+
+@media (min-width: 992px) and (max-width:1199px) {
+  .orange-banner-image.left {
+    bottom: -100px;  /* Move closer vertically */
+    left: -100px;    /* Move closer horizontally */
+    width: 280px;    /* Increase size */
+    height: 280px;
+  }
+
+  .orange-banner-image.right {
+    top: -100px;     /* Move closer vertically */
+    right: -100px;   /* Move closer horizontally */
+    width: 280px;    /* Increase size */
+    height: 280px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .orange-banner-image.left {
+    bottom: -100px;  /* Move closer vertically */
+    left: -100px;    /* Move closer horizontally */
+    width: 380px;    /* Increase size */
+    height: 380px;
+  }
+
+  .orange-banner-image.right {
+    top: -100px;     /* Move closer vertically */
+    right: -100px;   /* Move closer horizontally */
+    width: 380px;    /* Increase size */
+    height: 380px;
+  }
+}
+/* ==================== HERO SECTION WITH VIDEO ==================== */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-logo {
+  width: 150px;
+}
+
+.hero-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.hero-para {
+  font-size: 1.2rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Hero Section Responsive */
+@media (max-width: 767.98px) {
+  .hero-section {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-section {
+    height: 60vh;
+  }
+}
+
+/* ==================== CATEGORIES SECTION ==================== */
+.categories-section {
+  background-color: #DADADA;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.10), 0 10px 15px 0 rgba(0, 0, 0, 0.10)
+
+}
+
+.categories-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #161616;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.category-card {
+  background-color: #F6F6F6;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-top-right-radius: 120px;
+  border-top-left-radius: 120px;
+  max-width: 180px;
+  box-shadow: 0 3.556px 3.556px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+.category-img-container {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+ 
+  
+  margin: 0 auto 15px;
+}
+
+.category-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+ 
+}
+
+.category-name {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #FF5200;
+  margin: 0;
+}
+
+/* Categories Responsive */
+@media (max-width: 767.98px) {
+  .category-img-container {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+  .category-img-container {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+/* ==================== APP FEATURES SECTION ==================== */
+/* Section Container */
+.feature-section-bg-container {
+  background-color: #DADADA;
+  padding-bottom: 5px;
+}
+
+/* Green Curve Background */
+.app-features-section {
+  position: relative;
+  background: var(--gradient-radical-component, radial-gradient(144.65% 144.65% at 50% 50%, #25D969 0%, #043818 100%));
+  color: #fff;
+  text-align: center;
+  padding: 50px 0 120px;
+  overflow: hidden;
+  margin-bottom: 20px;
+
+  /* Wave Shape */
+  clip-path: ellipse(80% 100% at 50% 0%);
+  transition: clip-path 0.3s ease-in-out;
+}
+
+/* Titles */
+.features-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.features-subtitle {
+  font-size: 1rem;
+  color: #EDEDED;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Layout Wrapper */
+.features-layout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* Phone Center */
+.phone-wrapper {
+  position: relative;
+  width: 300px;
+  z-index: 2;
+  top: 120px;
+}
+
+.phone-img {
+  width: 100%;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+.phone-content {
+  position: absolute;
+  top: 30%;
+  left: 53%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+}
+
+.qr-img {
+  width: 160px;
+  margin-bottom: 10px;
+}
+
+.download-text {
+  font-size: 0.9rem;
+
+  color: #FD6502;
+  margin-top: 5px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.store-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.store-btn {
+  width: 90px;
+  cursor: pointer;
+}
+
+/* Floating Feature Cards */
+.feature-card {
+  position: absolute;
+  background: #fff;
+  color: #161616;
+  border-radius: 14px;
+  padding: 12px;
+  width: 120px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 5px;
+}
+
+
+.feature-card p {
+  font-size: 11px;
+  font-weight: 400;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* Positioning of Floating Cards */
+.veg-mode { top: 18%; left: 22%; }
+.healthy { bottom: 10%; left: 6%; }
+.plan-party { bottom: -18%; left: 22%; }
+.gourmet { top: 18%; right: 20%; }
+.offers { bottom: 10%; right: 4%; }
+.collections { bottom:-18%; right: 20%; }
+
+/* Responsive */
+
+@media (max-width:992px) {
+  .app-features-section {
+
+    clip-path: ellipse(100% 100% at 50% 0%);
+    .categories-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #161616;
+      font-family: "Plus Jakarta Sans", sans-serif;
+    }
     
   }
-  
-  /* Content inside the phone */
-  .phone-content {
-    position: absolute;
-    top: 17%; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 70%;
-    text-align: center;
-    z-index: 3;
+
+  /* Positioning of Floating Cards */
+.veg-mode { top: 20%; left: 14%; }
+.healthy { bottom: 14%; left: -5%; }
+.plan-party { bottom: -15%; left: 14%; }
+.gourmet { top: 20%; right: 12%; }
+.offers { bottom: 14%; right: -5%; }
+.collections { bottom:-15%; right: 12%; }
+
+
+.feature-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+
+}
+
+@media (max-width: 788.98px) {
+  .phone-wrapper {
+    width: 240px;
+    top: 120px;
   }
-  
+.app-features-section {
+
+  clip-path: ellipse(120% 100% at 50% 0%);
+}
+
+
   .qr-img {
-    width: 90px;
+    width: 120px;
+  }
+
+  .store-btn {
+    width: 60px;
+  }
+
+  .feature-card {
+    width: 14%;
+    padding: 8px;
+  }
+
+  .feature-card p{
+   font-size: 8px;
+  }
+
+  .feature-card img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Adjust Floating Cards */
+  .veg-mode { top: 40%; left: 13%; }
+  .healthy { bottom: 8%; left: -0%; }
+  .plan-party { bottom: -20%; left: 13%; }
+  .gourmet { top: 45%; right: 10%; }
+  .offers { bottom: 6%; right: -2%; }
+  .collections { bottom: -20%; right: 10%; }
+}
+
+@media (max-width: 576px) {
+  .app-features-section {
+    padding: 30px 0 30px;
+    clip-path: ellipse(140% 100% at 50% 0%);
+  }
+
+  .phone-wrapper {
+    width: 120px;
+    top: 40px;
+  }
+
+  .features-title {
+    font-size: 1.4rem;
+  }
+
+  .features-subtitle {
+    font-size: 0.9rem;
+  }
+  .qr-img {
+    width: 40px;
     margin-bottom: 5px;
   }
   
   .download-text {
-    font-size: 0.6rem;
-    font-weight: 600;
+    font-size: 0.4rem;
+  
     color: #FD6502;
-    margin-top: 5px;
-  }
-  
-  .store-links {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-  
-  .store-btn {
-    width: 60px;
-    cursor: pointer;
-  }
-  
-  /* ---------------- Floating Feature Cards ---------------- */
-  .feature-card {
-    position: absolute;
-    background: #fff;
-    color: #161616;
-    border-radius: 14px;
-    padding: 12px;
-    width: 90px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .feature-card img {
-    width: 30px;
-    height: 30px;
-    margin-bottom: 5px;
-  }
-  
-  .feature-card p {
-    font-size: 10px;
-    font-weight: 400;
-    margin: 0;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* -------- Exact Card Positions -------- */
-  .veg-mode { top: 10%; left: 30%; }
-  .healthy { bottom: 38%; left: 20%; }
-  .plan-party { bottom: 10%; left: 30%; }
-  
-  .gourmet { top: 10%; right: 30%; }
-  .offers { bottom: 38%; right: 20%; }
-  .collections { bottom: 10%; right: 30%; }
-  
-  /* ---------------- Responsiveness ---------------- */
-  @media (max-width: 992px) {
-    .phone-wrapper {
-      width: 350px;
-    }
-    .feature-card {
-      width: 75px;
-      padding: 8px;
-    }
-    .feature-card img {
-      width: 24px;
-      height: 24px;
-    }
-  
-    .veg-mode { top: 14%; left: 22%; }
-    .healthy { bottom: 35%; left: 8%; }
-    .plan-party { bottom: 10%; left: 22%; }
-  
-    .gourmet { top: 14%; right: 22%; }
-    .offers { bottom: 35%; right: 8%; }
-    .collections { bottom: 10%; right: 22%; }
-  }
-  
-  @media (max-width: 576px) {
-    .phone-wrapper {
-      width: 280px;
-    }
-  
-    .qr-img {
-      width: 70px;
-    }
-  
-    .store-btn {
-      width: 40px;
-    }
-  
-    .feature-card {
-      width: 65px;
-      padding: 6px;
-    }
-    .feature-card img {
-      width: 20px;
-      height: 20px;
-    }
-  
-    /* Mobile positions */
-    .veg-mode { top: 14%; left: 8%; }
-    .healthy { bottom: 14%; left: 5%; }
-    .plan-party { bottom: 6%; left: 18%; }
-  
-    .gourmet { top: 14%; right: 8%; }
-    .offers { bottom: 14%; right: 5%; }
-    .collections { bottom: 6%; right: 18%; }
-  }
-  
-  
-  /* Mobile */
-  @media (max-width: 576px) {
-    .app-features-section {
-      padding: 25px 0 25px; /* Compact height on small screens */
-      border-bottom-left-radius: 40%;
-      border-bottom-right-radius: 40%;
-    }
-  
-    .features-layout {
-      height: 180px;
-    }
-  
-    .phone-center {
-      width: 150px;
-      top: 60px;
-    }
-  
-    .feature-card {
-      width: 60px;
-      padding: 2px;
-    }
-    .feature-card img {
-      width: 25px;
-      height: 25px;
-    }
-  
-    /* Mobile text */
-    .features-title {
-      font-size: 1.4rem;
-    }
-    .features-subtitle {
-      font-size: 0.85rem;
-    }
-  
-    /* Mobile card positions */
-    .veg-mode { top: 0%; left: 14%; }
-    .healthy { bottom: 35%; left: 2%; }
-    .plan-party { bottom: 2%; left: 14%; }
-  
-    .gourmet { top: 6%; right: 14%; }
-    .offers { bottom: 35%; right: 2%; }
-    .collections { bottom: 2%; right: 14%; }
-  }
-
-  /* ================== Featured Products Section ================== */
-.featured-products-section {
-    background: #EAEAEA; 
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  
-  .featured-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #161616;
-    text-transform: uppercase;
-    margin-bottom: 40px;
-  }
-  
-  /* Product Card */
-  .product-card {
-    background: #fff;
-    border-radius: 10px; 
-    overflow: hidden;
-    box-shadow: 
-      0 10px 15px rgba(0, 0, 0, 0.10),
-      0 4px 8px rgba(0, 0, 0, 0.10);   
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    border: 1px solid #f0f0f0; 
-    justify-content: center;
-  }
-  
-  .product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 
-      0 12px 20px rgba(0, 0, 0, 0.15), 
-      0 6px 12px rgba(0, 0, 0, 0.12);
-  }
-  
-  .product-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  /* Image Area */
-  .product-img-container {
-    position: relative;
-    overflow: hidden;
-    border-bottom: 1px solid #EAEAEA;
-  }
-  
-  .product-img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-    border-radius: 6px 6px 0 0;
-  }
-  
-  /* Add to Cart Button (Always Visible) */
-  .add-to-cart-btn {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background: #161616;
-    color: #fff;
-    padding: 6px 10px;
-    font-size: 0.8rem;
-    border: none;
-    border-radius: 6px;
-    opacity: 1;
-    transition: background 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .add-to-cart-btn:hover {
-    background: #333;
-  }
-  
-  /* Product Info Section */
-  .product-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 12px;
-    flex-grow: 1; /* Pushes footer down if needed */
-  }
-  
-  .product-left {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  .product-name {
-    font-size: 1rem;
-  
-    color: #000000;
-    margin: 0;
-  }
-  
-  .product-category {
-    font-size: 0.8rem;
-    color: #6C6C6C;
-    margin-top: 4px;
-  }
-  
-  .product-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 6px;
-  }
-  
-  /* Rating Badge */
-  .rating {
-    display: inline-flex;
-    align-items: center;
-    background: #089437;
-    color: #E8E8E8;
-    font-size: 0.75rem;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 500;
-  }
-  
-  .star-icon {
-    font-size: 14px;
-    color: #fff;
-    margin-right: 3px;
-  }
-  
-  /* Price */
-  .price {
-    color: #FF6502;
-
-    font-size: 0.9rem;
-  }
-  
-
-  /* ================== Responsive ================== */
-  @media (max-width: 991.98px) {
-    .product-img {
-      height: 160px;
-    }
-  }
-  
-  @media (max-width: 767.98px) {
-    .product-img {
-      height: 140px;
-    }
-  
-    .product-info {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .product-right {
-      flex-direction: row;
-      align-items: center;
-      gap: 10px;
-      margin-top: 8px;
-    }
-  }
-  
-  @media (max-width: 575.98px) {
-    .featured-title {
-      font-size: 1.4rem;
-    }
-  
-    .product-img {
-      height: 120px;
-    }
-  }
-  
- /* Main Footer Section */
-.footer-section {
-    background: rgba(11, 11, 11, 0.89); /* Footer background with 89% opacity */
-    color: #fff;
-    padding: 40px 20px 20px;
-    margin:10px;
-    border-radius: 10px;
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  /* Logo */
-  .footer-logo {
-    text-align: center;
-  }
-  
-  .logo-img {
-    height: 55px;
-  }
-  
-  /* Footer Columns Layout */
-  .footer-columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 40px;
-    margin-top: 20px;
-  }
-  
-  /* Address Icon */
-  .footer-location-icon {
-    color: #FF6502 !important; /* Orange color */
-    font-size: 20px;
-    margin-right: 8px;
-    vertical-align: middle;
-  }
-  
-  /* Footer Column Styling */
-  .footer-col {
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* <-- Added spacing between all items inside each column */
-  }
-  
-  .footer-col h4 {
-    font-size: 1rem;
+    
     font-family: "Plus Jakarta Sans", sans-serif;
-    font-weight: 600;
-    margin-bottom: 5px;
-    color: #ffffff;
   }
-  
-  /* Add spacing between multiple <h4> tags (like in "For Restaurants") */
-  .footer-col h4 + h4 {
-    margin-top: 8px;
-  }
-  
-  /* Footer Column Paragraphs */
-  .footer-col p {
-    font-size: 0.9rem;
-    color: #E8E8E8;
-    line-height: 1.6;
-    font-weight: 400;
-    letter-spacing: 0.72px;
-    margin: 0;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  
-  
-  /* Contact Icons */
-  .contact-icon {
-    font-size: 18px;
-    color: #FF6502;
-    vertical-align: middle;
-    margin-right: 6px;
-  }
-  
-  /* Payment Methods */
-  .payment-icons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 8px;
-  }
-  
-  .payment-icons img {
-    height: 30px;
-    border-radius: 4px;
-    background: #fff;
-    padding: 4px;
-    transition: transform 0.3s ease;
-  }
-  
-  .payment-icons img:hover {
-    transform: scale(1.1);
-  }
-  
-  /* Social Icons */
-  .social-icons {
-    display: flex;
-    gap: 12px;
-    margin-top: 8px;
-  }
-  
-  .social-icons a {
-    color: #fff;
-    font-size: 20px;
-    transition: color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    color: #ff6500;
-    transform: translateY(-3px);
-  }
-  
-  /* Download Section */
-  .footer-download {
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .footer-download p {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #4B4B4B;
-    margin: 0 15px 10px 0;
-  }
-  
-  .download-buttons img {
-    height: 45px;
-    margin: 0 6px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .download-buttons img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Footer Bottom */
-  .footer-bottom {
-    text-align: center;
-    font-size: 0.85rem;
-    color: #4E4E4E;
-    margin-top: 10px;
-    padding-top: 10px;
-  }
-  
-  .footer-icon{
-    color:#FF6502;
+  .feature-card {
+    width:16%;
+    padding: 6px;
   }
 
-  /* Responsive Design */
-  @media (max-width: 767.98px) {
-    .footer-columns {
-      grid-template-columns: 1fr 1fr;
-      text-align: center;
-    }
-  
-    .payment-icons,
-    .social-icons {
-      justify-content: center;
-    }
-  
-    .footer-download {
-      flex-direction: column;
-      gap: 15px;
-    }
+  .feature-card p {
+    font-size: 8px;
+    font-weight: 400;
+    margin: 0;
+    font-family: "Plus Jakarta Sans", sans-serif;
   }
   
+
+  .feature-card img {
+    width: 20px;
+    height: 20px;
+  }
+  .store-btn{
+    width:32px;
+    margin: 0px;
+  }
+
+
+/* Positioning of Floating Cards */
+.veg-mode { top: 10%; left: 18%; }
+.healthy { bottom: 20%; left: -0%; }
+.plan-party { bottom: -10%; left: 18%; }
+.gourmet { top: 10%; right: 16%; }
+.offers { bottom: 20%; right: -1%; }
+.collections { bottom:-10%; right: 16%; }
+}
+
+
+
+/* Feature Products Section*/
+.featured-products-section {
+  background: #EAEAEA; 
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.featured-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #161616;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  
+}
+
+/* ================== Grid Adjustment ================== */
+/* Make every column a flex container so product-card can stretch fully */
+.row.g-3 > [class*="col-"] {
+  display: flex;
+}
+
+/* ================== Product Card ================== */
+.product-card {
+  background: #fff;
+  border-radius: 10px; 
+  overflow: hidden;
+  box-shadow: 
+    0 10px 15px rgba(0, 0, 0, 0.10),
+    0 4px 8px rgba(0, 0, 0, 0.10);   
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; 
+  width: 100%;
+  border: 1px solid #f0f0f0; 
+  padding: 5px;
+  padding-bottom: 0px;
+}
+
+
+/* ================== Product Image ================== */
+.product-img-container {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #EAEAEA;
+}
+
+.product-img {
+  width: 100%;
+  height: 240px; 
+  object-fit: cover;
+  display: block;
+  border-radius: 6px 6px 0 0;
+}
+
+/* ================== Add to Cart Button ================== */
+.add-to-cart-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: #161616;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  opacity: 1;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+
+/* ================== Product Info ================== */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  padding-bottom: 5px;
+  flex-grow: 1; 
+}
+
+/* ----------- Top: Name + Rating ----------- */
+.product-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.product-name {
+  font-size: 0.9rem;
+  color: #000000;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.0;
+  min-height: 20px; 
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Rating */
+.rating {
+  display: inline-flex;
+  align-items: center;
+  background: #089437;
+  color: #E8E8E8;
+  font-size: 0.75rem;
+  padding: 2px 4px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.fill-star-icon {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-right: 3px;
+}
+
+/* ----------- Bottom: Category + Price ----------- */
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-category {
+  font-size: 0.8rem;
+  color: #6C6C6C;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.price {
+  color: #FF6502;
+  font-size: 0.9rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+/* ================== Responsive Design ================== */
+@media (max-width: 767.98px) {
+  .product-img {
+    height: 140px;
+  }
+
+  .product-info {
+    flex-direction: column;
+  }
+
+  .product-top,
+  .product-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .product-img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .featured-title {
+    font-size: 1.5rem;
+  }
+
+  .product-img {
+    height: 120px;
+  }
+  .product-name{
+    font-size:0.8rem;
+  }
+  .product-top{
+    margin-top: 6px;
+  }
+}
+/* ==================== FOOTER SECTION ==================== */
+.footer-section {
+  background: #0B0B0B;
+  opacity: 89%;
+  color: #fff;
+  padding: 40px 20px 20px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-logo {
+  text-align: center;
+}
+
+.logo-img {
+  height: 55px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.footer-location-icon {
+  color: #FF6502 !important;
+  font-size: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+
+.footer-col h5 {
+  font-size: 0.9rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+
+.footer-col h4 + h4 {
+  margin-top: 8px;
+}
+
+.footer-col p {
+  font-size: 0.9rem;
+  color: #E8E8E8;
+  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: 0.72px;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+  color: #FF6502;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+
+}
+
+.payment-icons img {
+  height: 45px;
+
+  
+  padding: 4px;
+  transition: transform 0.3s ease;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.footer-download {
+  padding: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.download-buttons{
+  display: flex;
+  justify-content: center;
+}
+
+.footer-download p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #4B4B4B;
+  margin: 0 15px 10px 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.download-buttons img {
+  height: 45px;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+
+.footer-bottom {
+  text-align: center;
+  font-size: 1rem;
+  color: #4E4E4E;
+  font-family: "Plus Jakarta Sans";
+  bottom: 0px;
+}
+
+.footer-icon {
+  color: #FF6502;
+  font-size: 1.5rem;
+}
+
+.social-icons-container{
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.footer-bg-container{
+  background-color: #E8E8E8;
+  padding: 10px;
+ 
+}
+
+/* Footer Responsive */
+@media (max-width: 767.98px) {
+  .footer-columns {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+
+  .footer-download {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-download p{
+    font-size: 0.9rem;
+  }
+
+  
+
+}
+
+
+@media (max-width:992px) {
+  .social-icons-container{
+    flex-direction: column;
+  }
+  
+}
+
+@media (min-width:992px) {
+  .footer-download{
+    justify-content: center;
+  }  
+}
