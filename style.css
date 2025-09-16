@@ -126,6 +126,7 @@ html, body {
   }
 }
 
+
 /* ==================== ORANGE BANNER SECTION ==================== */
 .orange-banner-section {
   background-color: #FF5200;
@@ -247,7 +248,7 @@ html, body {
   top: calc(100% + 5px); 
   left: 0;
   width: 100%; 
-  background-color: #F2F2F2;
+  background-color: #ffffff;
   border-radius: 8px;
   z-index: 100 !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -271,7 +272,7 @@ html, body {
 }
 
 .option:hover {
-  background-color: #f2f2f2;
+  background-color:#F2F2F2;
 }
 
 
@@ -414,6 +415,90 @@ html, body {
   }
 }
 
+/* ==================== SERVICE POPUP ==================== */
+.service-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.service-popup-overlay.show {
+  display: flex;
+}
+
+.service-popup-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 25px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: popupScale 0.3s ease;
+}
+
+@keyframes popupScale {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.service-popup-content h2 {
+  font-size: 1.8rem;
+  color: #ff5200;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.service-popup-content p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+
+.close-popup-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.close-popup-btn:hover {
+  color: #ff5200;
+}
+
+.popup-ok-btn {
+  background-color: #ff5200;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup-ok-btn:hover {
+  background-color: #e04800;
+}
 
 
 

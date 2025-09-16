@@ -80,7 +80,7 @@
     </div>
     <div class="search-dropdown-container">
       <div class="location-input-container">
-        <input type="search" placeholder="Search for restaurant, item or more" class="search-input" id="restaurant-search"/>
+        <input type="search" placeholder="Search for restaurant" class="search-input" id="restaurant-search"/>
         <span class="material-icons">search</span>
       </div>
       <div class="dropdown-options" id="restaurant-options">
@@ -96,6 +96,17 @@
     </div>
   </div>
 </div>
+
+<!-- Popup for Service Unavailability -->
+<div class="service-popup-overlay" id="servicePopup">
+  <div class="service-popup-content">
+    <span class="close-popup-btn" id="closePopupBtn">&times;</span>
+    <h2>Sorry!</h2>
+    <p>We don't deliver to this area yet, but we'll cover it soon.</p>
+    <button class="popup-ok-btn" id="popupOkBtn">OK</button>
+  </div>
+</div>
+
 
   <!-- -------------------- Hero Section with Video -------------------- -->
   <section class="hero-section text-center text-white d-flex align-items-center justify-content-center mt-2">
@@ -225,7 +236,6 @@
 
 
 <section class="featured-products-section p-sm-0 p-md-5 shadow-lg mb-2">
-
   <div class="container-fluid">
     <h2 class="featured-title text-center">FEATURED PRODUCTS</h2>
 
@@ -233,7 +243,7 @@
       
       <!-- Product Card 1 -->
       <div class="col-6 col-md-4 col-lg-3 d-flex">
-        <div class="product-card">
+        <div class="product-card" data-id="101">
           <div class="product-img-container">
             <img src="assets/images/soup.png" alt="Tom Yum Soup" class="product-img">
             <button class="add-to-cart-btn">Add to Cart</button>
@@ -253,7 +263,7 @@
 
       <!-- Product Card 2 -->
       <div class="col-6 col-md-4 col-lg-3 d-flex">
-        <div class="product-card">
+        <div class="product-card" data-id="102">
           <div class="product-img-container">
             <img src="assets/images/sprouts.png" alt="Crispy Brussels Sprouts" class="product-img">
             <button class="add-to-cart-btn">Add to Cart</button>
@@ -273,7 +283,7 @@
 
       <!-- Product Card 3 -->
       <div class="col-6 col-md-4 col-lg-3 d-flex">
-        <div class="product-card">
+        <div class="product-card" data-id="103">
           <div class="product-img-container">
             <img src="assets/images/product-2.png" alt="Club Sandwich" class="product-img">
             <button class="add-to-cart-btn">Add to Cart</button>
@@ -293,7 +303,7 @@
 
       <!-- Product Card 4 -->
       <div class="col-6 col-md-4 col-lg-3 d-flex">
-        <div class="product-card">
+        <div class="product-card" data-id="104">
           <div class="product-img-container">
             <img src="assets/images/product1.png" alt="Tom Yum Soup" class="product-img">
             <button class="add-to-cart-btn">Add to Cart</button>
@@ -314,6 +324,7 @@
     </div>
   </div>
 </section>
+
 
 
 
