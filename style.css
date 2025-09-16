@@ -129,7 +129,7 @@ html, body {
 /* ==================== ORANGE BANNER SECTION ==================== */
 .orange-banner-section {
   background-color: #FF5200;
-  overflow: hidden;
+  overflow: visible; 
   position: relative;
   padding: 140px 20px;
   text-align: center;
@@ -138,6 +138,14 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+.orange-banner-bg {
+  position: absolute;
+  inset: 0;           
+  overflow: hidden;  
+  z-index: 1;
 }
 
 .orange-banner-heading {
@@ -225,6 +233,47 @@ html, body {
   top: -140px;
   right: -140px;
 }
+
+/* --- New CSS for the custom dropdown --- */
+.search-dropdown-container {
+  position: relative;
+  width: 330px;
+
+  max-width: 100%;
+}
+
+.dropdown-options {
+  position: absolute; 
+  top: calc(100% + 5px); 
+  left: 0;
+  width: 100%; 
+  background-color: #F2F2F2;
+  border-radius: 8px;
+  z-index: 100 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 250px; 
+  overflow-y: auto;
+  display: none; 
+  text-align: left;
+  opacity: 1 !important;
+}
+
+.dropdown-options.show {
+  display: block; /* Show the dropdown when needed. This will be controlled by JavaScript. */
+}
+
+.option {
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #333;
+  font-size: 14px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.option:hover {
+  background-color: #f2f2f2;
+}
+
 
 /* Orange Banner Responsive */
 @media (max-width: 767.98px) {
@@ -324,43 +373,51 @@ html, body {
 
   .search-input {
     font-size: 13px;
-  
     margin: 5px;
   }
-  
+
+  .search-dropdown-container {
+    width: 100%;
+    max-width: 350px;
+  }
 }
 
-@media (min-width: 992px) and (max-width:1199px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .orange-banner-image.left {
-    bottom: -100px;  /* Move closer vertically */
-    left: -100px;    /* Move closer horizontally */
-    width: 280px;    /* Increase size */
+    bottom: -100px;
+    left: -100px;
+    width: 280px;
     height: 280px;
   }
 
   .orange-banner-image.right {
-    top: -100px;     /* Move closer vertically */
-    right: -100px;   /* Move closer horizontally */
-    width: 280px;    /* Increase size */
+    top: -100px;
+    right: -100px;
+    width: 280px;
     height: 280px;
   }
 }
 
 @media (min-width: 1200px) {
   .orange-banner-image.left {
-    bottom: -100px;  /* Move closer vertically */
-    left: -100px;    /* Move closer horizontally */
-    width: 380px;    /* Increase size */
+    bottom: -100px;
+    left: -100px;
+    width: 380px;
     height: 380px;
   }
 
   .orange-banner-image.right {
-    top: -100px;     /* Move closer vertically */
-    right: -100px;   /* Move closer horizontally */
-    width: 380px;    /* Increase size */
+    top: -100px;
+    right: -100px;
+    width: 380px;
     height: 380px;
   }
 }
+
+
+
+
+
 /* ==================== HERO SECTION WITH VIDEO ==================== */
 .hero-section {
   position: relative;
@@ -382,19 +439,10 @@ html, body {
   z-index: 0;
 }
 
-.overlay {
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-  z-index: 1;
-}
+
 
 .hero-content {
-  position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero-logo {

@@ -20,7 +20,7 @@
   <!-- Google Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
- 
+ <script src="index.js" defer></script>
 
 </head>
 <body>
@@ -57,30 +57,45 @@
     </div>
   </div>
 
-  <!-- -------------------- Orange Banner -------------------- -->
-  <div class="orange-banner-section">
+  
+<!-- -------------------- Orange Banner -------------------- -->
+<div class="orange-banner-section">
+  <div class="orange-banner-bg">
     <img src="assets/images/orange-banner-image.png" alt="orange-banner-image" class="orange-banner-image left"/>
     <img src="assets/images/orange-banner-image.png" alt="orange-banner-image" class="orange-banner-image right"/>
-    
-    <h1 class="orange-banner-heading">
-      Order food & groceries. Discover<br/>best restaurants. <span>Food Dale!</span>
-    </h1>
-    
-    <p class="orange-banner-para">
-      Quick, tasty, and affordable — Food Dale brings the deal to your meal.
-    </p>
-    
-    <div class="input-container py-2">
+  </div>
+  
+  <h1 class="orange-banner-heading">
+    Order food & groceries. Discover<br/>best restaurants. <span>Food Dale!</span>
+  </h1>
+  
+  <p class="orange-banner-para">
+    Quick, tasty, and affordable — Food Dale brings the deal to your meal.
+  </p>
+  
+  <div class="input-container py-2">
+    <div class="location-input-container">
+      <span class="material-icons location-icon">location_on</span>
+      <input type="search" placeholder="Enter Your Delivery Location" class="search-input"/>
+    </div>
+    <div class="search-dropdown-container">
       <div class="location-input-container">
-        <span class="material-icons location-icon">location_on</span>
-        <input type="search" placeholder="Enter Your Delivery Location" class="search-input"/>
-      </div>
-      <div class="location-input-container">
-        <input type="search" placeholder="Search for restaurant, item or more" class="search-input"/>
+        <input type="search" placeholder="Search for restaurant, item or more" class="search-input" id="restaurant-search"/>
         <span class="material-icons">search</span>
+      </div>
+      <div class="dropdown-options" id="restaurant-options">
+        <div class="option">Gala Restaurant</div>
+        <div class="option">Amada's Taste</div>
+        <div class="option">Plaza Restaurant</div>
+        <div class="option">Santo Domingo Food Basket</div>
+        <div class="option">Jumbo</div>
+        <div class="option">Thai Time</div>
+        <div class="option">Bella Pizzeria and Burger</div>
+        <div class="option">Pikanadas</div>
       </div>
     </div>
   </div>
+</div>
 
   <!-- -------------------- Hero Section with Video -------------------- -->
   <section class="hero-section text-center text-white d-flex align-items-center justify-content-center mt-2">
@@ -88,7 +103,6 @@
       <source src="assets/images/hero-bg.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="overlay"></div>
     <div class="container hero-content">
       <img src="assets/images/nav-logo.png" alt="Food Dale Logo" class="hero-logo mb-3"/>
       <h1 class="hero-heading">USA #1<br/>Food Delivery App</h1>
