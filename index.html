@@ -32,14 +32,19 @@
         <img src="assets/images/nav-logo.png" alt="nav-logo" class="img-fluid nav-logo"/>
       </a>
       <div class="d-flex align-items-center ms-auto">
-        <div class="d-none d-md-flex align-items-center me-3">
-          <p class="nav-get-app-text mb-0">
-            Get the App
-            <span class="arrow-circle">
-              <span class="material-icons">arrow_outward</span>
-            </span>
-          </p>
-        </div>
+        <a href="https://play.google.com/store/apps/details?id=com.foodDale.android&hl=en_IN" 
+        target="_blank" 
+        class="get-app-link">
+       <div class="d-none d-md-flex align-items-center me-3">
+         <p class="nav-get-app-text mb-0">
+           Get the App
+           <span class="arrow-circle">
+             <span class="material-icons">arrow_outward</span>
+           </span>
+         </p>
+       </div>
+     </a>
+     
         <button class="login-btn me-2">Log in</button>
         <button class="signup-btn">Sign Up</button>
       </div>
@@ -53,10 +58,14 @@
         <button class="delivery-btn">Delivery</button>
         <button class="takeaway-btn">Takeaway</button>
       </div>
-      <span class="material-icons text-white">shopping_cart</span>
+      <a href="cart.html" class="d-flex align-items-center text-white position-relative text-decoration-none">
+        <span class="material-icons text-white">shopping_cart</span>
+        <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          0
+        </span>
+      </a>
     </div>
   </div>
-
   
 <!-- -------------------- Orange Banner -------------------- -->
 <div class="orange-banner-section">
@@ -95,7 +104,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>  
 
 <!-- Popup for Service Unavailability -->
 <div class="service-popup-overlay" id="servicePopup">
@@ -106,7 +115,6 @@
     <button class="popup-ok-btn" id="popupOkBtn">OK</button>
   </div>
 </div>
-
 
   <!-- -------------------- Hero Section with Video -------------------- -->
   <section class="hero-section text-center text-white d-flex align-items-center justify-content-center mt-2">
@@ -188,13 +196,13 @@
         <div class="phone-wrapper">
           <img src="assets/images/mobile 2.png" alt="Food Dale App" class="phone-img">
 
-          <!-- Content inside phone -->
+          <!-- Content inside phone  -->
           <div class="phone-content">
             <img src="assets/images/scanner.png" alt="QR Code" class="qr-img">
             <p class="download-text">DOWNLOAD THE APP</p>
             <div class="store-links">
-              <img src="assets/images/appstore.png" alt="App Store" class="store-btn">
-              <img src="assets/images/playstore.png" alt="Google Play" class="store-btn">
+              <a href="https://apps.apple.com/us/app/food-dale/id6450175698" target="_blank"><img src="assets/images/appstore.png" alt="App Store" class="store-btn"></a>
+             <a href="https://play.google.com/store/apps/details?id=com.foodDale.android&hl=en_IN" target="_blank"> <img src="assets/images/playstore.png" alt="Google Play" class="store-btn"></a>
             </div>
           </div>
         </div>
@@ -234,16 +242,22 @@
   </div>
 </section>
 
-
 <section class="featured-products-section p-sm-0 p-md-5 shadow-lg mb-2">
+
   <div class="container-fluid">
     <h2 class="featured-title text-center">FEATURED PRODUCTS</h2>
 
     <div class="row g-3">
       
-      <!-- Product Card 1 -->
       <div class="col-6 col-md-4 col-lg-3 d-flex">
-        <div class="product-card" data-id="101">
+        <div class="product-card"
+             data-id="1"
+             data-name="Tom Yum Soup"
+             data-price="8.95"
+             data-image="assets/images/soup.png"
+             data-category="THAI TIME"
+             >
+
           <div class="product-img-container">
             <img src="assets/images/soup.png" alt="Tom Yum Soup" class="product-img">
             <button class="add-to-cart-btn">Add to Cart</button>
@@ -261,9 +275,13 @@
         </div>
       </div>
 
-      <!-- Product Card 2 -->
       <div class="col-6 col-md-4 col-lg-3 d-flex">
-        <div class="product-card" data-id="102">
+        <div class="product-card"
+             data-id="2"
+             data-name="Crispy Brussels Sprouts"
+             data-price="8.95"
+             data-image="assets/images/sprouts.png"
+             data-category="THAI TIME">
           <div class="product-img-container">
             <img src="assets/images/sprouts.png" alt="Crispy Brussels Sprouts" class="product-img">
             <button class="add-to-cart-btn">Add to Cart</button>
@@ -281,9 +299,13 @@
         </div>
       </div>
 
-      <!-- Product Card 3 -->
       <div class="col-6 col-md-4 col-lg-3 d-flex">
-        <div class="product-card" data-id="103">
+        <div class="product-card"
+             data-id="3"
+             data-name="Club Sandwich"
+             data-price="9.25"
+             data-image="assets/images/product-2.png"
+             data-category="THAI TIME">
           <div class="product-img-container">
             <img src="assets/images/product-2.png" alt="Club Sandwich" class="product-img">
             <button class="add-to-cart-btn">Add to Cart</button>
@@ -301,9 +323,13 @@
         </div>
       </div>
 
-      <!-- Product Card 4 -->
       <div class="col-6 col-md-4 col-lg-3 d-flex">
-        <div class="product-card" data-id="104">
+        <div class="product-card"
+             data-id="4"
+             data-name="Tom Yum Soup"
+             data-price="8.95"
+             data-image="assets/images/product1.png"
+             data-category="THAI TIME">
           <div class="product-img-container">
             <img src="assets/images/product1.png" alt="Tom Yum Soup" class="product-img">
             <button class="add-to-cart-btn">Add to Cart</button>
@@ -324,9 +350,6 @@
     </div>
   </div>
 </section>
-
-
-
 
 
 
@@ -388,10 +411,10 @@
             <div class="social-icons-container">
               <h4 class="mt-3">Keep in Touch</h4>
               <div class="social-icons">
-                <a href="#"><i class="fab fa-instagram footer-icon"></i></a>
+                <a href="https://www.instagram.com/fooddaleonline/" target="_blank"><i class="fab fa-instagram footer-icon"></i></a>
                 <a href="#"><i class="fab fa-twitter footer-icon" aria-hidden="true"></i></a>
-                <a href="#"><i class="fab fa-facebook footer-icon"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in footer-icon"></i></a>
+                <a href="https://fr-fr.facebook.com/permalink.php?story_fbid=320824524670646&id=280197505405584" target="_blank"> <i class="fab fa-facebook footer-icon"></i></a>
+                <a href="https://www.linkedin.com/in/food-dale-inc-a07b81353/" target="_blank"><i class="fab fa-linkedin-in footer-icon"></i></a>
                 
               </div>
           </div>
@@ -408,8 +431,8 @@
   <div class="footer-download d-flex justify-content-center align-items-center gap-4">
     <p>FOR BETTER EXPERIENCE, DOWNLOAD THE FOOD DALE APP NOW</p>
     <div class="download-buttons">
-      <a href="#"><img src="assets/images/playstore.png" alt="Google Play"></a>
-      <a href="#"><img src="assets/images/appstore.png" alt="App Store"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.foodDale.android&hl=en_IN" target="_blank"><img src="assets/images/playstore.png" alt="Google Play"></a>
+      <a href="https://apps.apple.com/us/app/food-dale/id6450175698" target="_blank"><img src="assets/images/appstore.png" alt="App Store"></a>
     </div>
   </div>
   
